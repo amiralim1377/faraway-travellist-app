@@ -1,0 +1,29 @@
+.formWrapper {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+form {
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px;
+}
+
+span {
+  color: #77cdff;
+  text-align: center;
+  font-weight: 500;
+  font-size: 24px;
+}
+
+select {
+  background: #4cc9fe;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+input {
+  background: #4cc9fe;
+  padding: 10px;
+  border-radius: 25px;
+}
