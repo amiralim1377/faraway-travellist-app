@@ -38,7 +38,7 @@ function AllElementItems({ remember }) {
           {checked ? (
             <button
               onClick={() => handleUpdate(id)}
-              class="button-68"
+              className="button-68"
               role="button"
             >
               checked
@@ -46,7 +46,7 @@ function AllElementItems({ remember }) {
           ) : (
             <button
               onClick={() => handleUpdate(id)}
-              class="button-32"
+              className="button-32"
               role="button"
             >
               unchecked
