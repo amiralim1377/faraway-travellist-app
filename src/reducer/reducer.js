@@ -13,16 +13,17 @@ const rememberSlice = createSlice({
     },
     updateremember(state, action) {
       const theUpdateValue = state.find((item) => item.id === action.payload);
-      console.log(theUpdateValue);
-
       if (theUpdateValue) {
         theUpdateValue.checked = !theUpdateValue.checked;
       }
     },
+    clearallremember(state) {
+      return [];
+    },
   },
 });
 
-export const { addremember, deleteremember, updateremember } =
+export const { addremember, deleteremember, updateremember, clearallremember } =
   rememberSlice.actions;
 
 export default rememberSlice.reducer;
