@@ -10,24 +10,101 @@ form {
 }
 
 span {
-  color: #77cdff;
+  color: #fff6e9;
   text-align: center;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 30px;
+  font-family: Bebas Neue;
+}
+
+span:last-of-type {
+  color: #bbe2ec;
+  font-weight: 300;
+  font-size: 20px;
+  font-family: Bebas Neue;
 }
 
 select {
-  background: #4cc9fe;
+  background: #bfecff;
   padding: 10px;
   border-radius: 25px;
 }
 
 input {
-  background: #4cc9fe;
+  background: #bfecff;
   padding: 10px;
   border-radius: 25px;
 }
 
 .inputError {
   color: #af1740;
+}
+
+/* btn */
+
+.btnWraper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn {
+  background: #bfecff;
+  border-radius: 999px;
+  box-shadow: #bfecff 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.btn:hover {
+  background: #608bc1;
+  box-shadow: #608bc1 0 20px 40px -20px;
+}
+
+/* CSS */
+.button-34 {
+  background: #bfecff;
+  border-radius: 999px;
+  box-shadow: #bfecff 0 10px 20px -10px;
+  box-sizing: border-box;
+  color: black;
+  cursor: pointer;
+  font-family: Inter, Helvetica, "Apple Color Emoji", "Segoe UI Emoji",
+    NotoColorEmoji, "Noto Color Emoji", "Segoe UI Symbol", "Android Emoji",
+    EmojiSymbols, -apple-system, system-ui, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  opacity: 1;
+  outline: 0 solid transparent;
+  padding: 8px 18px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: fit-content;
+  word-break: break-word;
+  border: 0;
+}
+
+.button-34:hover {
+  background: #608bc1;
+  box-shadow: #608bc1 0 20px 40px -20px;
 }
