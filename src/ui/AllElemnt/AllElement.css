@@ -2,3 +2,11 @@
   max-width: 1280px;
   margin: 0 auto;
 }
+
+.ulElem {
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+}

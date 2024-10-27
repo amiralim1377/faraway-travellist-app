@@ -1,25 +1,19 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-const initialState = {
-  item: "",
-  number: "",
-};
-
+const initialState = [];
 const rememberSlice = createSlice({
   name: "remember",
   initialState,
   reducers: {
-    descitem(state, action) {
-      state.item = action.payload;
+    addremember(state, action) {
+      state.push(action.payload);
     },
-    numberitem(state, action) {
-      state.number = action.payload;
+    deleteremember(state, action) {
+      return state.filter((item) => item.id !== action.payload);
     },
   },
 });
 
-console.log(rememberSlice);
-
-export const { descitem, numberitem } = rememberSlice.actions;
+export const { addremember, deleteremember } = rememberSlice.actions;
 
 export default rememberSlice.reducer;

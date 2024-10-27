@@ -1,7 +1,8 @@
 import { useForm } from "react-hook-form";
 import "./InputElem.css";
 import { useDispatch } from "react-redux";
-import { descitem, numberitem } from "../../reducer/reducer";
+import { addremember } from "../../reducer/reducer";
+import { v4 as uuidv4 } from "uuid";
 
 function InputElem() {
   const dispatch = useDispatch();
@@ -10,8 +11,9 @@ function InputElem() {
 
   const onSubmit = (data) => {
     console.log(data);
-    dispatch(descitem(data.item));
-    dispatch(numberitem(data.number));
+    const newobj = { id: uuidv4(), checkd: false, ...data };
+
+    dispatch(addremember(newobj));
     reset();
   };
   return (

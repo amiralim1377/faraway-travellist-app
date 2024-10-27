@@ -1,19 +1,16 @@
 import { useSelector } from "react-redux";
 import "./AllElement.css";
+import AllElementItems from "../AllElementItems/AllElementItems";
 
 function AllElemnt() {
-  const item = useSelector((state) => state.remember.item);
-  const number = useSelector((state) => state.remember.number);
+  const remembers = useSelector((state) => state.remember);
+
   return (
     <div className="allElWrapper">
-      <ul>
-        <li>
-          <input type="checkbox" name="" id="" />
-          <span>{number}</span>
-          <span>-</span>
-          <span>{item}</span>
-          <button>❌</button>
-        </li>
+      <ul className="ulElem">
+        {remembers?.map((remember) => (
+          <AllElementItems remember={remember} />
+        ))}
       </ul>
     </div>
   );
