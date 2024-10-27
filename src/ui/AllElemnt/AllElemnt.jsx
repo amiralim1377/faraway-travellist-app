@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
-import "./AllElement.css";
 import AllElementItems from "../AllElementItems/AllElementItems";
+import "./AllElement.css";
 
 function AllElemnt() {
   const remembers = useSelector((state) => state.remember);
@@ -9,7 +9,7 @@ function AllElemnt() {
     <div className="allElWrapper">
       <ul className="ulElem">
         {remembers?.map((remember) => (
-          <AllElementItems remember={remember} />
+          <AllElementItems key={remember.id} remember={remember} />
         ))}
       </ul>
     </div>

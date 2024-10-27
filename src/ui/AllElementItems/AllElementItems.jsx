@@ -1,19 +1,60 @@
-import { useDispatch } from "react-redux";
-import { deleteremember } from "../../reducer/reducer";
+import { useDispatch, useSelector } from "react-redux";
+import { deleteremember, updateremember } from "../../reducer/reducer";
+import "./AllElementItems.css";
 
 function AllElementItems({ remember }) {
+  const { number, item, id, checked } = remember;
+  console.log(checked);
+
   const dispatch = useDispatch();
   const handledelete = (id) => {
     dispatch(deleteremember(id));
   };
+  const handleUpdate = (id) => {
+    dispatch(updateremember(id));
+  };
   return (
-    <li key={remember.id}>
-      <input type="checkbox" name="" id="" />
-      <span>{remember.number}</span>
-      <span>-</span>
-      <span>{remember.item}</span>
-      <button onClick={() => handledelete(remember.id)}>❌</button>
-    </li>
+    <div className="licontainer">
+      <li>
+        {/* <input
+          onClick={() => handleUpdate(id)}
+          type="checkbox"
+          name=""
+          id=""
+          className="checkbox"
+        /> */}
+        <span>{number}</span>
+        <span>-</span>
+        <span>{item}</span>
+        <span>-</span>
+        <button
+          onClick={() => handledelete(id)}
+          className="button-44"
+          role="button"
+        >
+          Delete
+        </button>
+        <div>
+          {checked ? (
+            <button
+              onClick={() => handleUpdate(id)}
+              class="button-68"
+              role="button"
+            >
+              checked
+            </button>
+          ) : (
+            <button
+              onClick={() => handleUpdate(id)}
+              class="button-32"
+              role="button"
+            >
+              unchecked
+            </button>
+          )}
+        </div>
+      </li>
+    </div>
   );
 }
 

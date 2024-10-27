@@ -1,11 +1,13 @@
 .allElWrapper {
   max-width: 1280px;
   margin: 0 auto;
+  overflow: scroll;
 }
 
 .ulElem {
+  list-style: none;
   display: grid;
-  align-items: center;
+  align-items: flex-start;
   justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   gap: 50px;

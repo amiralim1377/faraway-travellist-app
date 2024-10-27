@@ -11,7 +11,7 @@ function InputElem() {
 
   const onSubmit = (data) => {
     console.log(data);
-    const newobj = { id: uuidv4(), checkd: false, ...data };
+    const newobj = { id: uuidv4(), checked: false, ...data };
 
     dispatch(addremember(newobj));
     reset();

@@ -1,5 +1,7 @@
 .h1text {
   color: #37afe1;
+  font-size: 48px;
   text-align: center;
-  font-family: poppins-regular;
+  font-family: Bebas Neue;
+  font-weight: 600;
 }
